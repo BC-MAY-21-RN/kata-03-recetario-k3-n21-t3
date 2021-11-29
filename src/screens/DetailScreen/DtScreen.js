@@ -19,6 +19,7 @@ const DetailScreen = (props) => {
       {/* <Text>{props.descripcion} - ingredients for 3 servings</Text> */}
       <ScrollView>
         {/*map-this the x amount of ingredients{*/}
+        
 
       </ScrollView>
     </View>

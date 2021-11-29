@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import  ImageHero from '../components/DSHero'
 import  ButtonBar from '../components/ButtonBar'
+import  ListItem from '../components/ButtonBar'
 
 const DetailScreen = (props) => {
   return (
@@ -19,7 +20,7 @@ const DetailScreen = (props) => {
       {/* <Text>{props.descripcion} - ingredients for 3 servings</Text> */}
       <ScrollView>
         {/*map-this the x amount of ingredients{*/}
-        
+
 
       </ScrollView>
     </View>

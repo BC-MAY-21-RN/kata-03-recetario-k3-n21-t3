@@ -1,16 +1,19 @@
 import React from 'react';
-import { View } from 'react-native';
-
 import { NavigationContainer } from '@react-navigation/native';
+import MainNavigator from './src/navigators/MainNavigator/index.js';
+import MainScreen from './src/screens/MainScreen/MainScreen.js';
 
-import MainNavigator from './src/navigators/MainNavigator';
-
-const App = () => {
+const App = () =>{
   return (
-    <NavigationContainer>
-      <MainNavigator />
-    </NavigationContainer>
+    /*
+      <NavigationContainer>
+        <MainNavigator>
+      </NavigationContainer>
+    */
+    <MainScreen></MainScreen>
   )
 }
 
+
 export default App;
+

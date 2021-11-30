@@ -1,8 +1,5 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import  ImageHero from '../components/DSHero'
-import  ButtonBar from '../components/ButtonBar'
-import  ListItem from '../components/ButtonBar'
 
 const DetailScreen = (props) => {
   return (
@@ -15,7 +12,7 @@ const DetailScreen = (props) => {
         imagen={url}
       />
       <ButtonBar></ButtonBar>
-      <Text>{/*Tag*/}</Text>
+      <Text>Tag</Text>
       <Text>{/*Nombre Receta*/}</Text>
       {/* <Text>{props.descripcion} - ingredients for 3 servings</Text> */}
       <ScrollView>

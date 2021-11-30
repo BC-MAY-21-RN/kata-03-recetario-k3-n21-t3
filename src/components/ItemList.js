@@ -5,12 +5,11 @@ const ItemList = () => {
   return (
     <View>
       <Divider></Divider>
+      <TouchableOpacity onPress={() => {}}>
+        <Text>Soy un boton</Text>
+      </TouchableOpacity>
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-
-})
 
 export default ItemList;

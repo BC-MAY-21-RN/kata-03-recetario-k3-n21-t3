@@ -5,18 +5,10 @@ const Item = () => {
   return (
     <TouchableOpacity>
       <View>
-        <Image 
-          //style={styles.Image},
-          source={{}}
-        />
         <Text></Text>
       </View>
     </TouchableOpacity>
   )
 }
-
-const styles = StyleSheet.create({
-
-})
 
 export default Item;

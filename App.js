@@ -1,16 +1,28 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import MainNavigator from './src/navigators/MainNavigator/index.js';
+import { createStackNavigatoor } from '@react-navigation/native-stack'
+
 import MainScreen from './src/screens/MainScreen/MainScreen.js';
+
+const Stack = createStackNavigatoor();
 
 const App = () =>{
   return (
-    /*
       <NavigationContainer>
-        <MainNavigator>
+        <Stack.Navigator>
+          {/* Screen 1 */}
+          <Stack.Screen 
+            name="MainScreen"
+            component={MainScreen}
+          />
+          {/* Screen 2 */}
+          <Stack.Screen
+            name="DtScreen"
+            component={DtScreen}
+          />
+
+        </Stack.Navigator>
       </NavigationContainer>
-    */
-    <MainScreen></MainScreen>
   )
 }
 

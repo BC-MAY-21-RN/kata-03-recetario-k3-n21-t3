@@ -1,55 +1,50 @@
 import React from 'react'
-import {Text, Button, SearchBar, StyleSheet, ScrollView, Alert} from 'react-native';
+import {Alert, Button, Text, TextInput, SafeAreaView, ScrollView, StyleSheet,  } from 'react-native';
+//import { SearchBar } from 'react-native-elements';
+import styles from './stylesMain';
+import Card from '../../components/Card';
 
-const MainScreen = () => {
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-  // const showAlert = () =>
-  // Alert.alert(
-  //   "Alert Title",
-  //   "My Alert Msg",
-  //   [
-  //     {
-  //       text: "Cancel",
-  //       onPress: () => Alert.alert("Cancel Pressed"),
-  //       style: "cancel",
-  //     },
-  //   ],
-  //   {
-  //     cancelable: true,
-  //     onDismiss: () =>
-  //       Alert.alert(
-  //         "This alert was dismissed by tapping outside of the alert dialog."
-  //       ),
-  //   }
-  // );
+interface Props extends NativeStackScreenProps<any, any> {}
 
+const MainScreen = (props: Props) => {
+  const {navigation} = props;
+  
   const changeScreen = () =>{
-    navigation.navigate('Profile')
+      navigation.navigate('DtScreen')
   }
   
   return(
-    <ScrollView>
-      {/* //horizontal Scroll */}
-
-      {/* <SearchBar 
-        placeholder ="What do you want to eat?"
-        /> */}
-
-      {/* //Text > trending */}
-      <Text> Trending</Text>
+    <SafeAreaView style={styles.container}>  
+      <ScrollView style={styles.body}>
+        
+        <TextInput 
+          style={styles.SearchBar}
+        />
+        
         {/* //horizontal Scroll */}
+        
 
+        {/* //Text > trending */}
+        <Text style={styles.text}> Trending</Text>
+          {/* //horizontal Scroll */}
+          <ScrollView horizontal={true}>
+            <Card />
+          </ScrollView>
 
-      {/* //Text > trernding */}
-      <Text> Recent </Text>
-      <Button
-        onPress={""}
-        title="Boton para moverte a otra pagina"
-        color="#841584"
-        accessibilityLabel="Learn more about this purple button"
-      />
-        {/* //horizontal Scroll */}
-    </ScrollView>
+        {/* //Text > trernding */}
+        <Text style={styles.text}> Recent </Text>
+
+        { <Button
+          onPress = {() => changeScreen()}
+          title="Boton para moverte a otra pagina"
+          color="#841584"
+          accessibilityLabel="Learn more about this purple button"
+        />}
+          {/* //horizontal Scroll */}
+      </ScrollView>
+    </SafeAreaView>
   )
 }
 

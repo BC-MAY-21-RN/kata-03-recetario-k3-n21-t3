@@ -5,7 +5,9 @@ const Item = () => {
   return (
     <TouchableOpacity>
       <View>
-        <Text></Text>
+        <Text>
+          ASDADSSDS
+        </Text>
       </View>
     </TouchableOpacity>
   )

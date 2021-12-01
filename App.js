@@ -5,12 +5,9 @@ import MainScreen from './src/screens/MainScreen/MainScreen.js';
 
 const App = () =>{
   return (
-    /*
       <NavigationContainer>
-        <MainNavigator>
+        <MainNavigator />
       </NavigationContainer>
-    */
-    <MainScreen></MainScreen>
   )
 }
 

@@ -4,12 +4,12 @@ import {Alert, Button, Text, TextInput, SafeAreaView, ScrollView, StyleSheet,  }
 import styles from './stylesMain';
 import Card from '../../components/Card';
 
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
+// import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-interface Props extends NativeStackScreenProps<any, any> {}
-
-const MainScreen = (props: Props) => {
-  const {navigation} = props;
+// interface Props extends NativeStackScreenProps<any, any> {}
+//props: Props
+const MainScreen = () => {
+  //const {navigation} = props;
   
   const changeScreen = () =>{
       navigation.navigate('DtScreen')

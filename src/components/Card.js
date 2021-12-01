@@ -5,6 +5,9 @@ const Item = () => {
   return (
     <TouchableOpacity>
       <View>
+        <Image style={{width: 20, height: 20}}
+          source={{uri: ""}}
+        />
         <Text>
           ASDADSSDS
         </Text>

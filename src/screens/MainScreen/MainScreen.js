@@ -1,16 +1,29 @@
 import React from 'react'
-import {Alert, Button, Text, TextInput, SafeAreaView, ScrollView, StyleSheet,  } from 'react-native';
+import {Alert, Button, View, Text, TextInput, SafeAreaView, ScrollView, StyleSheet,  } from 'react-native';
 //import { SearchBar } from 'react-native-elements';
 import styles from './stylesMain';
-import Card from '../../components/Card';
+import Card from '../../components/Card/Card.js';
+import recetas from '../../helpers/recetas.js';
 
-// import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-// interface Props extends NativeStackScreenProps<any, any> {}
-//props: Props
-const MainScreen = () => {
-  //const {navigation} = props;
+interface Props extends NativeStackScreenProps<any, any> {}
+
+const MainScreen = (props: Props) => {
+  const {navigation} = props;
   
+  const renderRecipe = recetas?.map((receta, index)=>{
+    return <Card name={receta.name} img={receta.image} />
+  })
+
+  {/* Render para renreziar los platillos recientes. */}
+  const renderFavRecipe = recetas?.map((receta, index)=>{
+    if(receta.recent == 1)
+    {
+      return <Card name={receta.name} img={receta.image} />
+    }
+  })
+
   const changeScreen = () =>{
       navigation.navigate('DtScreen')
   }
@@ -19,30 +32,23 @@ const MainScreen = () => {
     <SafeAreaView style={styles.container}>  
       <ScrollView style={styles.body}>
         
-        <TextInput 
-          style={styles.SearchBar}
-        />
-        
-        {/* //horizontal Scroll */}
-        
+        <View style={styles.container2}>
+          {/* SearchBar */}
+          <TextInput 
+            style={styles.SearchBar}
+          />
 
-        {/* //Text > trending */}
-        <Text style={styles.text}> Trending</Text>
-          {/* //horizontal Scroll */}
-          <ScrollView horizontal={true}>
-            <Card />
-          </ScrollView>
+          {/* Horizontal scroll with info */}
+          <Text style={styles.text}> Trending</Text>
+            <ScrollView horizontal={true}>{renderRecipe}</ScrollView>
 
-        {/* //Text > trernding */}
-        <Text style={styles.text}> Recent </Text>
+          {/* //Text > trernding */}
+          <Text style={styles.text}> Recent </Text>
+            <ScrollView horizontal={true}>{renderFavRecipe}</ScrollView>
 
-        { <Button
-          onPress = {() => changeScreen()}
-          title="Boton para moverte a otra pagina"
-          color="#841584"
-          accessibilityLabel="Learn more about this purple button"
-        />}
-          {/* //horizontal Scroll */}
+        </View>
+
+
       </ScrollView>
     </SafeAreaView>
   )

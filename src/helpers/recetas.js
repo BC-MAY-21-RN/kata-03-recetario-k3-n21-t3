@@ -1,10 +1,10 @@
 export default recetas = [
   {
     'id': 1,
-    'name': "pizza",
+    'name': "Pizza",
     'description': "pizza con pepperoni",
-    'love': false,
-    'trending': 1,
+    'love': true,
+    'recent': 1,
     'ingredientes' : [ 
       {
       'nombre' : "Salsa de tomate con orégano",
@@ -32,15 +32,15 @@ export default recetas = [
         'measurement ':"500g",
       },
     ],
-    'image': require("../src/assets/img/pizza.jpeg"),
+    'image': require("../assets/img/pizza.jpeg"),
     'tag': "comida rapida",
   },
   {
     'id': 2,
-    'name': "spaguetti",
+    'name': "Spaguetti",
     'description': "spaguetti",
     'love': false,
-    'trending': 1,
+    'recent': 0,
     'ingredientes' : [ 
       {
       'nombre' : "Salsa de tomate con orégano",
@@ -78,15 +78,15 @@ export default recetas = [
         'measurement ':"100g",
       },
     ],
-    'image': require("../src/assets/img/spaguetti.jpeg"),
+    'image': require("../assets/img/spaguetti.jpeg"),
     'tag': "platillo",
   },
   {
     'id': 3,
-    'name': "lasaña",
+    'name': "Lasaña",
     'description': "lasaña",
     'love': false,
-    'trending': 1,
+    'recent': 0,
     'ingredientes' : [ 
       {
       'nombre' : "carne de ternera para guisar",
@@ -144,15 +144,15 @@ export default recetas = [
         'measurement ':"al gusto",
       },
     ],
-    'image': require("../src/assets/img/lasaña.jpeg"),
+    'image': require("../assets/img/lasaña.jpeg"),
     'tag': "platillo",
   },
   {
     'id': 4,
-    'name': "brownie",
+    'name': "Brownie",
     'description': "brownies deli",
     'love': false,
-    'trending': 1,
+    'recent': 0,
     'ingredientes' : [ 
       {
       'nombre' : "mantequilla",
@@ -190,15 +190,15 @@ export default recetas = [
         'measurement ':"120g",
       },
     ],
-    'image': require("../src/assets/img/brownie.jpeg"),
+    'image': require("../assets/img/brownie.jpeg"),
     'tag': "postre",
   },
   {
     'id': 5,
-    'name': "macaroon",
+    'name': "Macaroon",
     'description': "macaroones deli",
     'love': false,
-    'trending': 1,
+    'recent': 0,
     'ingredientes' : [ 
       {
       'nombre' : "harina de almendras",
@@ -221,7 +221,7 @@ export default recetas = [
         'measurement':'30g',
       },
     ],
-    'image': require("../src/assets/img/macaroon.jpeg"),
+    'image': require("../assets/img/macaroon.jpeg"),
     'tag': "postre",
   },
 ]

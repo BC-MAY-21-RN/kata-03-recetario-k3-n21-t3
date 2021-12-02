@@ -21,6 +21,9 @@ const styles = StyleSheet.create({
     borderColor: '#fff',
     borderWidth: 2,
     margin: 10,
+  },
+  container2:{
+    margin: 10,
   }
 })
 

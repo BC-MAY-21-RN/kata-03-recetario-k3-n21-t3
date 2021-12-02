@@ -33,14 +33,14 @@ export default recetas = [
       },
     ],
     'image': require("../assets/img/pizza.jpeg"),
-    'tag': "comida rapida",
+    'tag': "TRENDING",
   },
   {
     'id': 2,
     'name': "Spaguetti",
     'description': "spaguetti",
     'love': false,
-    'recent': 0,
+    'recent': 1,
     'ingredientes' : [ 
       {
       'nombre' : "Salsa de tomate con orégano",
@@ -79,7 +79,7 @@ export default recetas = [
       },
     ],
     'image': require("../assets/img/spaguetti.jpeg"),
-    'tag': "platillo",
+    'tag': "TRENDING",
   },
   {
     'id': 3,
@@ -145,7 +145,7 @@ export default recetas = [
       },
     ],
     'image': require("../assets/img/lasaña.jpeg"),
-    'tag': "platillo",
+    'tag': "TRENDING",
   },
   {
     'id': 4,
@@ -191,7 +191,7 @@ export default recetas = [
       },
     ],
     'image': require("../assets/img/brownie.jpeg"),
-    'tag': "postre",
+    'tag': "TRENDING",
   },
   {
     'id': 5,
@@ -222,6 +222,6 @@ export default recetas = [
       },
     ],
     'image': require("../assets/img/macaroon.jpeg"),
-    'tag': "postre",
+    'tag': "TRENDING",
   },
 ]

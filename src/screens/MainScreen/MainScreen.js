@@ -5,6 +5,7 @@ import styles from './stylesMain';
 import Card from '../../components/Card/Card.js';
 import recetas from '../../helpers/recetas.js';
 import recipeModel from '../../models/recipeModel.js'
+import IonIcons from 'react-native-vector-icons/Ionicons'
 
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
@@ -38,6 +39,7 @@ const MainScreen = (props: Props) => {
 
   return(
     <SafeAreaView style={styles.container}>
+      <IonIcons name="ios-person" size={30} color="#4F8EF7" />
       <ScrollView style={styles.body}>
 
         <View style={styles.container2}>

@@ -23,6 +23,12 @@ const styles = StyleSheet.create({
   },
   container2:{
     margin: 10,
+  },
+  iconSize:{
+    fontSize: 20,
+  },
+  iconColor:{
+    color: "black",
   }
 })
 

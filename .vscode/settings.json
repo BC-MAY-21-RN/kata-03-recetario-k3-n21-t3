@@ -2,5 +2,6 @@
   "editor.codeLensFontSize": 20,
   "editor.fontFamily": "'JetBrains Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
   "editor.fontSize": 18,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "java.configuration.updateBuildConfiguration": "interactive"
 }

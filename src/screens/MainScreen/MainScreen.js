@@ -1,6 +1,6 @@
 import React from 'react'
 import {Alert, Button, View, Text, TextInput, SafeAreaView, ScrollView, StyleSheet,  } from 'react-native';
-//import { SearchBar } from 'react-native-elements';
+import { SearchBar } from 'react-native-elements';
 import styles from './stylesMain';
 import Card from '../../components/Card/Card.js';
 import recetas from '../../helpers/recetas.js';
@@ -12,11 +12,13 @@ interface Props extends NativeStackScreenProps<any, any> {}
 
 const MainScreen = (props: Props) => {
   const {navigation} = props;
-  
+
   const onSelectedRecipe = (receta: recipeModel) =>{
     navigation.navigate('DtScreen', receta)
   }
 
+
+  {/* Render para renreziar las recetas TRENDING. */}
   const renderRecipe = recetas?.map((receta, index)=>{
     if(receta.tag == "TRENDING")
     {
@@ -24,7 +26,8 @@ const MainScreen = (props: Props) => {
     }
   })
 
-  {/* Render para renreziar los platillos recientes. */}
+
+  {/* Render para renreziar las recetas recientes. */}
   const renderFavRecipe = recetas?.map((receta, index)=>{
     if(receta.recent == 1)
     {
@@ -32,19 +35,14 @@ const MainScreen = (props: Props) => {
     }
   })
 
-  const changeScreen = () =>{
-      navigation.navigate('DtScreen')
-  }
-  
+
   return(
-    <SafeAreaView style={styles.container}>  
+    <SafeAreaView style={styles.container}>
       <ScrollView style={styles.body}>
-        
+
         <View style={styles.container2}>
           {/* SearchBar */}
-          <TextInput 
-            style={styles.SearchBar}
-          />
+          {/* <SearchBar placeholder="Type Here..." /> */}
 
           {/* Horizontal scroll with info */}
           <Text style={styles.text}> Trending</Text>
@@ -55,7 +53,6 @@ const MainScreen = (props: Props) => {
             <ScrollView horizontal={true}>{renderFavRecipe}</ScrollView>
 
         </View>
-
 
       </ScrollView>
     </SafeAreaView>

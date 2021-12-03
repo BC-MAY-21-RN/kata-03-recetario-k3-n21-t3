@@ -16,7 +16,8 @@ const Item = (props: Props) => {
   return (
     <TouchableOpacity 
     style={cardStyles.containerCard}
-    onPress ={ () => onClick(receta)}>
+    onPress ={ () => onClick(receta)}
+    >
       <View style={cardStyles.viewStyle}>
        <Image style={cardStyles.Image}
           source={image}

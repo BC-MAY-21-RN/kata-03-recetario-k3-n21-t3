@@ -1,32 +1,37 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, ScrollView, Text,Image, StyleSheet } from 'react-native';
 import styles from '../MainScreen/stylesMain';
+import IngredientItemList from '../../components/IngredientItemList/IngredientItemList.js'
+import DShero from '../../components/DSHero.js'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 interface Props extends NativeStackScreenProps<MainParams, 'recipeDetail'> {}
 
 const DetailScreen = (props: Props) => {
   const { route: {params: receta} } = props;
-
-  const {name, description, love, recent, ingredients, image, tag} = receta;
+  const {name, description, love, recent, ingredientes, image, tag} = receta;
   
+  const renderIngredients = ingredientes?.map((ingredient, index)=>{
+    return <IngredientItemList 
+      key={`Ingredient-${index}`}
+      name={ingredient.nombre}
+      quantity={ingredient.cantidad}
+      unit={ingredient.unit}
+    />
+  })
+
   return (
     <View style={styles.body}>
-      {/*<ImageHero 
-        link={props.shareLink}
-        fav={props.fav}
-        recent={props.tag}
-        name={"Peperoni pizza pockets"}
-        imagen={url}
-        <ButtonBar></ButtonBar>
-      />*/}
-      <Text></Text>
-      <Text>{/*Nombre Receta*/}</Text>
-      {/* <Text>{props.descripcion} - ingredients for 3 servings</Text> */}
-      {/*<ScrollView>
-        map-this the x amount of ingredients{
+      <DShero 
+        imageUrl={image}
+        tag={tag}
+        name={name}
+      />
 
-
-      </ScrollView>*/}
+      <Text>{description}</Text>
+      <ScrollView>
+        {renderIngredients}
+      </ScrollView>
     </View>
   )
 }

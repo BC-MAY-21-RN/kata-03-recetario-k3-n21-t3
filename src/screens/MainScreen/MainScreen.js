@@ -29,7 +29,7 @@ const MainScreen = (props: Props) => {
 
 
   {/* Render para renreziar las recetas recientes. */}
-  const renderFavRecipe = recetas?.map((receta, index)=>{
+  const renderRecent = recetas?.map((receta, index)=>{
     if(receta.recent == 1)
     {
       return <Card key={`recetas-${index}`} receta={receta} onClick={onSelectedRecipe}/>
@@ -46,7 +46,7 @@ const MainScreen = (props: Props) => {
 
 
           <Text style={styles.text}> Recent </Text>
-          <ScrollView horizontal={true}>{renderFavRecipe}</ScrollView>
+          <ScrollView horizontal={true}>{renderRecent}</ScrollView>
 
         </View>
 

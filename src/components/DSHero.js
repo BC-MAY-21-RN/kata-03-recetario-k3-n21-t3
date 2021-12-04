@@ -7,6 +7,10 @@ import IonIcons from 'react-native-vector-icons/Ionicons'
 
 const Component = (props) => {
 
+  // const renderLike = () =>{
+  //   if(){}
+  // }
+
   return (
     <View style={Styles.DSheroImage}>
       <View style={Styles.iconos}>

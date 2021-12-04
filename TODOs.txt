@@ -1,0 +1,5 @@
+++Todos++
+
+//Escribir en el archivo JSON
+  aumentar
+//Crear funcion para likes

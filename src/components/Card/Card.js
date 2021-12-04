@@ -8,10 +8,9 @@ interface Props{
   onClick: (receta: recipeModel) => void;
 }
 
-
 const Item = (props: Props) => {
   const {receta, onClick} = props
-  const { name, image } = receta;
+  const { name, image, recent } = receta;
 
   return (
     <TouchableOpacity 
@@ -20,7 +19,7 @@ const Item = (props: Props) => {
     >
       <View style={cardStyles.viewStyle}>
        <Image style={cardStyles.Image}
-          source={image}
+          source={{uri: image}}
         />
         <Text style={cardStyles.cardText}>
           {name}

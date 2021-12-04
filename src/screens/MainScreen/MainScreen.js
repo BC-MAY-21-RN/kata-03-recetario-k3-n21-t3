@@ -3,9 +3,9 @@ import {Alert, Button, View, Text, TextInput, SafeAreaView, ScrollView, StyleShe
 import { SearchBar } from 'react-native-elements';
 import styles from './stylesMain';
 import Card from '../../components/Card/Card.js';
-import recetas from '../../helpers/recetas.js';
+import recetas from '../../helpers/recetas.json';
 import recipeModel from '../../models/recipeModel.js'
-import IonIcons from 'react-native-vector-icons/Ionicons'
+
 
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
@@ -39,20 +39,14 @@ const MainScreen = (props: Props) => {
 
   return(
     <SafeAreaView style={styles.container}>
-      <IonIcons name="ios-person" size={30} color="#4F8EF7" />
       <ScrollView style={styles.body}>
-
         <View style={styles.container2}>
-          {/* SearchBar */}
-          {/* <SearchBar placeholder="Type Here..." /> */}
-
-          {/* Horizontal scroll with info */}
           <Text style={styles.text}> Trending</Text>
-            <ScrollView horizontal={true}>{renderRecipe}</ScrollView>
+          <ScrollView horizontal={true}>{renderRecipe}</ScrollView>
 
-          {/* //Text > trernding */}
+
           <Text style={styles.text}> Recent </Text>
-            <ScrollView horizontal={true}>{renderFavRecipe}</ScrollView>
+          <ScrollView horizontal={true}>{renderFavRecipe}</ScrollView>
 
         </View>
 

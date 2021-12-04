@@ -4,6 +4,7 @@ export interface model{
   description: String,
   love: Boolean,
   recent: number,
+  servings: number,
   ingredientes: Array,
   image: String,
   tag: String,

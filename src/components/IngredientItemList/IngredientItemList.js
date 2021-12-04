@@ -14,12 +14,9 @@ const styles = StyleSheet.create({
   listItem:{
     display: 'flex',
     flexDirection: 'row',
-    marginLeft: '3%',
-    marginRight: '3%',
-    width: '94%',
     borderBottomWidth: 0.5,
     borderBottomColor: 'white',
-    marginBottom: 5,
+    marginTop: 4,
     justifyContent: 'space-between',
   },
   listchildren:{

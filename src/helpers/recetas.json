@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "name": "Pizza",
+    "description": "pizza con pepperoni, pan y queso",
+    "love": true,
+    "recent": 1,
+    "servings": 5,
+    "ingredientes" : [ 
+      {
+        "nombre" : "Salsa de tomate con orégano",
+        "cantidad": 150,
+        "unit": "ml"
+      },
+      {
+        "nombre" : "Pepperoni",
+        "cantidad": 100,
+        "unit": "g"
+      },
+      {
+        "nombre" : "Mozzarella en barra",
+        "cantidad": 100,
+        "unit":"g"
+      },
+      {
+        "nombre" : "Mozzarella fresca de búfala",
+        "cantidad": 150,
+        "unit":"g"
+      },
+      {
+        "nombre" : "Harina de fuerza",
+        "cantidad": 500,
+        "unit": "g"
+      }
+    ],
+    "image": "https://www.lavanguardia.com/files/og_thumbnail/files/fp/uploads/2021/03/30/6063031b90a87.r_d.1083-871-0.jpeg",
+    "tag": "TRENDING"
+  },
+  {
+    "id": 2,
+    "name": "Spaghetti",
+    "description": "Spaghetti noodles fa doodles",
+    "love": false,
+    "recent": 1,
+    "servings": 3,
+    "ingredientes" : [ 
+      {
+      "nombre" : "Salsa de tomate con orégano",
+      "cantidad": 150,
+      "unit": "ml"
+      },
+      {
+        "nombre" : "Pasta",
+        "cantidad": 200,
+        "unit": "g"
+      },
+      {
+        "nombre" : "Cebolla",
+        "cantidad": "1/2",
+        "unit": "u"
+      },
+      {
+        "nombre" : "dientes de ajo",
+        "cantidad": 2,
+        "unit": "u"
+      },
+      {
+        "nombre" : "crema de leche",
+        "cantidad": 100,
+        "unit": "ml"
+      },
+      {
+        "nombre" : "pimentón",
+        "cantidad": 100,
+        "unit": "g"
+      },
+      {
+        "nombre" : "orégano seco",
+        "cantidad": 100,
+        "unit": "g"
+      }
+    ],
+    "image": "https://www.diariamenteali.com/medias/Spaghetti-al-or-gano-1900Wx500H?context=bWFzdGVyfGltYWdlc3wxNzQ5MzN8aW1hZ2UvanBlZ3xoODgvaDNmLzkwNzQyMTkyODY1NTgvU3BhZ2hldHRpLWFsLW9yw6lnYW5vXzE5MDBXeDUwMEh8YTZiNWY5ZmMzODExNDc2MmQzZTU3ZjVlYzg0OTFjZDAzNWUyMWRhMmJjOThiNTM3MmZlNWFlNmZkZjg2OTE5OQ",
+    "tag": "TRENDING"
+  },
+  {
+    "id": 3,
+    "name": "Lasaña",
+    "description": "lasaña",
+    "love": false,
+    "recent": 0,
+    "servings": 6,
+    "ingredientes" : [ 
+      {
+      "nombre" : "carne de ternera para guisar",
+      "cantidad": 600,
+      "unit": "g"
+      },
+      {
+        "nombre" : "panceta de cerdo",
+        "cantidad": 300,
+        "unit": "g"
+      },
+      {
+        "nombre" : "cebolla",
+        "cantidad": 1,
+        "unit": "u"
+      },
+      {
+        "nombre" : "zanahoria",
+        "cantidad": 80,
+        "unit": "g"
+      },
+      {
+        "nombre" : "apio",
+        "cantidad": 50,
+        "unit": "g"
+      },
+      {
+        "nombre" : "vino tinto",
+        "cantidad": 200,
+        "unit": "ml"
+      },
+      {
+        "nombre" : "salsa de tomate",
+        "cantidad": 800,
+        "unit": "g"
+      },
+      {
+        "nombre" : "leche",
+        "cantidad": 50,
+        "unit": "ml"
+      },      
+      {
+        "nombre" : "aceite de oliva",
+        "cantidad": 3,
+        "unit":"cda"
+      },      
+      {
+        "nombre" : "sal",
+        "cantidad": 1,
+        "unit": "pzc"
+      },
+      {
+        "nombre" : "pimineta",
+        "cantidad": 1,
+        "unit": "pzc"
+      }
+    ],
+    "image": "https://www.recetasdesbieta.com/wp-content/uploads/2018/10/lasagna-original..jpg",
+    "tag": "TRENDING"
+  },
+  {
+    "id": 4,
+    "name": "Brownie",
+    "description": "brownies deli",
+    "love": false,
+    "recent": 0,
+    "servings": 4,
+    "ingredientes" : [ 
+      {
+      "nombre" : "mantequilla",
+      "cantidad": 200,
+      "unit": "g"
+      },
+      {
+        "nombre" : " chocolate negro 70% mínimo",
+        "cantidad": 180,
+        "unit": "g"
+      },
+      {
+        "nombre" : "huevos",
+        "cantidad": 100,
+        "unit": "g"
+      },
+      {
+        "nombre" : "azúcar normal o glass",
+        "cantidad": 225,
+        "unit": "g"
+      },
+      {
+        "nombre" : "cacao en polvo sin azúcar",
+        "cantidad": 30,
+        "unit": "g"
+      },
+      {
+        "nombre" : "esencia de vainilla",
+        "cantidad": "1/2",
+        "unit": "u"
+      },
+      {
+        "nombre" : "harina de trigo",
+        "cantidad": 120,
+        "unit": "g"
+      }
+    ],
+    "image":  "https://media.mykaramelli.com/galeria/recetas/brownie-de-capuchino-y-nueces-de-pecan_52_1.jpg",
+    "tag": "TRENDING"
+  },
+  {
+    "id": 5,
+    "name": "Macaroon",
+    "description": "macaroons deli",
+    "love": false,
+    "recent": 0,
+    "servings": 3,
+    "ingredientes" : [ 
+      {
+      "nombre" : "harina de almendras",
+      "cantidad": 100,
+      "unit": "g"
+      },
+      {
+        "nombre" : "azucar",
+        "cantidad": 220,
+        "unit": "g"
+      },
+      {
+        "nombre" : "claras de huevo envejecidas",
+        "cantidad": 100,
+        "unit": "g"
+      },
+      {
+        "nombre" : " azúcar blanquilla",
+        "cantidad": 30,
+        "unit": "g"
+      }
+    ],
+    "image": "https://i.pinimg.com/originals/6c/f6/67/6cf667176851f4a381cdf1de62ac7da2.jpg",
+    "tag": "TRENDING"
+  }
+]

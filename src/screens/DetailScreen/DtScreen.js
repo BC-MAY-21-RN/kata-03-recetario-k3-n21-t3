@@ -1,15 +1,15 @@
 import React from 'react';
 import { View, ScrollView, Text,Image, StyleSheet } from 'react-native';
-import styles from '../MainScreen/stylesMain';
+import styles from './stylesDtScreen.js';
 import IngredientItemList from '../../components/IngredientItemList/IngredientItemList.js'
 import DShero from '../../components/DSHero.js'
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+
 
 interface Props extends NativeStackScreenProps<MainParams, 'recipeDetail'> {}
 
 const DetailScreen = (props: Props) => {
   const { route: {params: receta} } = props;
-  const {name, description, love, recent, ingredientes, image, tag} = receta;
+  const {name, description, love, recent, servings, ingredientes, image, tag} = receta;
   
   const renderIngredients = ingredientes?.map((ingredient, index)=>{
     return <IngredientItemList 
@@ -26,10 +26,14 @@ const DetailScreen = (props: Props) => {
         imageUrl={image}
         tag={tag}
         name={name}
+                
       />
+      <View style={styles.middleCompRecipee}>
+        <Text style={styles.middleText1}>Ingredients</Text>
+        <Text style={styles.middleText2}>for {servings} servings</Text>
+      </View>
 
-      <Text>{description}</Text>
-      <ScrollView>
+      <ScrollView style={styles.scrollPadding}>
         {renderIngredients}
       </ScrollView>
     </View>

@@ -1,23 +1,15 @@
 import React from 'react'
-import {Alert, Button, View, Text, TextInput, SafeAreaView, ScrollView, StyleSheet,  } from 'react-native';
-import { SearchBar } from 'react-native-elements';
+import {View, Text, SafeAreaView, ScrollView } from 'react-native';
 import styles from './stylesMain';
 import Card from '../../components/Card/Card.js';
 import recetas from '../../helpers/recetas.json';
-import recipeModel from '../../models/recipeModel.js'
 
-
-import {NativeStackScreenProps} from '@react-navigation/native-stack';
-
-interface Props extends NativeStackScreenProps<any, any> {}
-
-const MainScreen = (props: Props) => {
+const MainScreen = (props) => {
   const {navigation} = props;
 
-  const onSelectedRecipe = (receta: recipeModel) =>{
+  const onSelectedRecipe = (receta) =>{
     navigation.navigate('DtScreen', receta)
   }
-
 
   {/* Render para renreziar las recetas TRENDING. */}
   const renderRecipe = recetas?.map((receta, index)=>{
@@ -27,7 +19,6 @@ const MainScreen = (props: Props) => {
     }
   })
 
-
   {/* Render para renreziar las recetas recientes. */}
   const renderRecent = recetas?.map((receta, index)=>{
     if(receta.recent == 1)
@@ -36,14 +27,12 @@ const MainScreen = (props: Props) => {
     }
   })
 
-
   return(
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.body}>
         <View style={styles.container2}>
           <Text style={styles.text}> Trending</Text>
           <ScrollView horizontal={true}>{renderRecipe}</ScrollView>
-
 
           <Text style={styles.text}> Recent </Text>
           <ScrollView horizontal={true}>{renderRecent}</ScrollView>

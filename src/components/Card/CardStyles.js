@@ -1,5 +1,4 @@
-import { Dimensions, StyleSheet } from 'react-native'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
+import { StyleSheet } from 'react-native'
 
 const cardStyles = StyleSheet.create({
   containerCard:{

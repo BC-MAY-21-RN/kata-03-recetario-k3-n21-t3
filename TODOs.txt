@@ -2,4 +2,4 @@
 
 //Escribir en el archivo JSON
   aumentar
-//Crear funcion para likes
+//Crear funcion para recents

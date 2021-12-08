@@ -9,31 +9,56 @@ import {useState, useEffect} from 'react'
 const MainScreen = (props) => {
   const {navigation} = props;
   const [state, setState] = useState('')
-  const [renderRecipe, setRecipe] = useState()
-  
+  const [recetario, setRecetario] = useState(recetas)
+  const [renderRecent, setRenderR] = useState(null)  
+  const [renderTrending, setRender] = useState(null)
+
   const updateSearch = (state) => {
     setState(state);
   };
 
-  const onSelectedRecipe = (receta) =>{
-    navigation.navigate('DtScreen', receta)
+  const updateToRecent = (receta) =>{
+    recetas[receta.id-1].recent = 1
+    setRecetario(recetas)
+    const temp2 = recetario?.map((receta, index)=>{
+      if(receta.recent == 1)
+      {
+        return <Card key={`recetas-${index}`} 
+          receta={receta}
+          onClick={ 
+          onSelectedRecipe
+        }/>
+      }
+    })
+    setRenderR(temp2)
   }
 
 
-  const renderRecent = recetas?.map((receta, index)=>{
-    if(receta.recent == 1)
-    {
-      return <Card key={`recetas-${index}`} receta={receta} onClick={onSelectedRecipe}/>
-    }
-  })
-
+  const onSelectedRecipe = (receta) =>{
+    updateToRecent(receta)
+    navigation.navigate('DtScreen', receta)
+  }
+  
+  
   useEffect(() => {
-    if(state=="")
-    {recetas?.map((receta, index)=>{
-      if(receta.tag == "TRENDING")
-        recetaCard += <Card key={`recetas-${index}`} receta={receta} onClick={onSelectedRecipe} />
-        setRecipe(recetaCard)
+    if(state!="")
+    {
+      const temp = recetario?.map((receta, index)=>{
+        if(receta.tag=="TRENDING" && receta.name.toLowerCase().includes(state.toLowerCase()))
+        {
+          return <Card key={`recetas-${index}`} receta={receta} onClick={onSelectedRecipe}/>
+        }
       })
+      setRender(temp)
+    }else
+    {
+      const temp = recetario?.map((receta, index)=>{
+        if(receta.tag=="TRENDING")
+        {
+          return <Card key={`recetas-${index}`} receta={receta} onClick={onSelectedRecipe}/>
+        }
+      })
+      setRender(temp)
     }
   }, [state])
 
@@ -43,10 +68,10 @@ const MainScreen = (props) => {
     <SafeAreaView style={styles.container}>
       <Search updateSearch={updateSearch} state={state}/>
       <ScrollView style={styles.body}>
-        <View style={styles.container2}>
+        <View style={styles.container2  }>
           
         <Text style={styles.text}> Trending</Text>
-        <ScrollView horizontal={true}>{renderRecipe}</ScrollView>
+        <ScrollView horizontal={true}>{renderTrending}</ScrollView>
       
         <Text style={styles.text}> Recent </Text>
         <ScrollView horizontal={true}>{renderRecent}</ScrollView>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Image, StyleSheet } from 'react-native'
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import IonIcons from 'react-native-vector-icons/Ionicons'
 
 //import styled from 'styled-components/native'
@@ -17,7 +17,10 @@ const Component = (props) => {
         <IonIcons name="close-outline" size={40} color="#fff"/>
         <View>
           <IonIcons name="share-outline" size={30} color="#fff">
-          <IonIcons name="heart-outline" size={30} color="#fff"/>
+          <TouchableOpacity 
+              onPress ={ () => {}}>
+            <IonIcons name="heart-outline" size={30} color="#fff"/>
+          </TouchableOpacity>
           </IonIcons>
         </View>
       </View>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { SearchBar } from 'react-native-elements';
 
-const Search = ({state, updateSearch}) => {
+export const Search = ({state, updateSearch}) => {
  
   return (
     <SearchBar
@@ -11,4 +11,3 @@ const Search = ({state, updateSearch}) => {
     />
   );
 }
-export default Search;

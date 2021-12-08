@@ -7,7 +7,6 @@ const App = () =>{
     <NavigationContainer>
       <MainNavigator />
     </NavigationContainer>
-
   )
 }
 

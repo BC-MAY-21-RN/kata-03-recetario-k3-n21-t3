@@ -4,7 +4,7 @@
     "name": "Pizza",
     "description": "pizza con pepperoni, pan y queso",
     "love": true,
-    "recent": 1,
+    "recent": 0,
     "servings": 5,
     "ingredientes" : [ 
       {
@@ -41,7 +41,7 @@
     "name": "Spaghetti",
     "description": "Spaghetti noodles fa doodles",
     "love": false,
-    "recent": 1,
+    "recent": 0,
     "servings": 3,
     "ingredientes" : [ 
       {

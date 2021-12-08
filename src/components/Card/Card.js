@@ -1,8 +1,8 @@
 import React from 'react';
 import { Image, View, Text, TouchableOpacity } from 'react-native';
-import cardStyles from './CardStyles';
+import {cardStyles} from './CardStyles';
 
-const Item = (props) => {
+export const Card = (props) => {
   const {receta, onClick} = props
   const { name, image } = receta;
 
@@ -22,5 +22,3 @@ const Item = (props) => {
     </TouchableOpacity>
   )
 }
-
-export default Item;

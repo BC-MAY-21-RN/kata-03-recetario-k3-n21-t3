@@ -1,8 +1,7 @@
 import React from 'react';
 import { View, ScrollView, Text,Image, StyleSheet } from 'react-native';
-import styles from './stylesDtScreen.js';
-import IngredientItemList from '../../components/IngredientItemList/IngredientItemList.js'
-import DShero from '../../components/DSHero.js';
+import {styles} from './stylesDtScreen.js';
+import {DSHero, IngredientItemList} from '../../components/index.js';
 
 const DetailScreen = (props) => {
   const { route: {params: receta} } = props;
@@ -19,7 +18,7 @@ const DetailScreen = (props) => {
 
   return (
     <View style={styles.body}>
-      <DShero 
+      <DSHero 
         imageUrl={image}
         tag={tag}
         name={name}

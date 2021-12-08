@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-const cardStyles = StyleSheet.create({
+export const cardStyles = StyleSheet.create({
   containerCard:{
     flex: 1,
     width: 100,
@@ -22,5 +22,3 @@ const cardStyles = StyleSheet.create({
     fontSize: 20
   }
 })
-
-export default cardStyles;

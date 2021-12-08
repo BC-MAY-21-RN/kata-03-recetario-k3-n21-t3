@@ -1,16 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 import IonIcons from 'react-native-vector-icons/Ionicons'
-
-//import styled from 'styled-components/native'
-//const {width, height} = Dimensions.get('window');
-
 const Component = (props) => {
+  const [fav, setFav] = useState("heart-outline")
 
-  // const renderLike = () =>{
-  //   if(){}
-  // }
-
+  const favorito = () =>{
+    if(fav == 'heart-outline'){
+      setFav('heart')
+    }else{
+      setFav('heart-outline')
+    }
+  }
   return (
     <View style={Styles.DSheroImage}>
       <View style={Styles.iconos}>
@@ -18,8 +18,8 @@ const Component = (props) => {
         <View>
           <IonIcons name="share-outline" size={30} color="#fff">
           <TouchableOpacity 
-              onPress ={ () => {}}>
-            <IonIcons name="heart-outline" size={30} color="#fff"/>
+              onPress ={ () => {favorito(fav)}}>
+            <IonIcons name={`${fav}`} size={30} color="#fff"/>
           </TouchableOpacity>
           </IonIcons>
         </View>
@@ -73,35 +73,6 @@ const Styles = StyleSheet.create({
   }
 
 });
-//default styling
-// const styles = StyleSheet.create({
-//   heroImage:{
-//     display: 'flex',
-//     flexDirection: 'row',
-//     width: '100%',
-//     height: '50%',
-//   },
-// })
-//styled component
-// const DShero = styled.View`
-//   display: flex;
-//   flex-direction: row;
-//   width: 100%;
-//   height: 40%;
-//   border: 1px solid red;
-// `;
 
-// const DSHeroImage = styled.View`
-  
-// `;
 
 export default Component;
-
-{/*<ImageHero 
-        link={props.shareLink}
-        fav={props.fav}
-        recent={props.tag}
-        name={"Peperoni pizza pockets"}
-        imagen={url}
-        <ButtonBar></ButtonBar>
-      />*/}

@@ -33,7 +33,6 @@ const MainScreen = (props) => {
     setRenderR(temp2)
   }
 
-
   const onSelectedRecipe = (receta) =>{
     updateToRecent(receta)
     navigation.navigate('DtScreen', receta)
@@ -61,7 +60,6 @@ const MainScreen = (props) => {
       setRender(temp)
     }
   }, [state])
-
 
   {/* Render para renreziar las recetas recientes. */}
   return(

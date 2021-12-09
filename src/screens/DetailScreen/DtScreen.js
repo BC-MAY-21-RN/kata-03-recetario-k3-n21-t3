@@ -18,16 +18,11 @@ const DetailScreen = (props) => {
 
   return (
     <View style={styles.body}>
-      <DSHero 
-        imageUrl={image}
-        tag={tag}
-        name={name}
-      />
+      <DSHero imageUrl={image} tag={tag} name={name} />
       <View style={styles.middleCompRecipee}>
         <Text style={styles.middleText1}>Ingredients</Text>
         <Text style={styles.middleText2}>for {servings} servings</Text>
       </View>
-
       <ScrollView style={styles.scrollPadding}>
         {renderIngredients}
       </ScrollView>

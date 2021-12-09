@@ -1,60 +1,54 @@
 import React, {useState, useEffect} from 'react'
-import {View, Text, SafeAreaView, ScrollView } from 'react-native';
-import styles from './stylesMain';
-import {Card, Search} from '../../components/index.js';
-import recetas from '../../helpers/recetas.json';
+import {View, Text, SafeAreaView, ScrollView } from 'react-native'
+import styles from './stylesMain'
+import {Card, Search} from '../../components/index.js'
+import recetas from '../../helpers/recetas.json'
 
 const MainScreen = (props) => {
-  const {navigation} = props;
-  const [state, setState] = useState('');
-  const [recetario, setRecetario] = useState(recetas);
-  const [renderRecent, setRenderR] = useState(null);
-  const [renderTrending, setRender] = useState(null);
+  const {navigation} = props
+  const [state, setState] = useState('')
+  const [recetario, setRecetario] = useState(recetas)
+  const [renderRecent, setRenderR] = useState(null)
+  const [renderTrending, setRender] = useState(null)
 
-  const updateSearch = (state) => {
-    setState(state);
-  };
+  const updateSearch = (state) => setState(state)
 
   const updateToRecent = (receta) =>{
     recetas[receta.id-1].recent = 1
-    setRecetario(recetas);
+    setRecetario(recetas)
     const temp2 = recetario?.map((receta, index)=>{
       if(receta.recent == 1)
       {
-        return <Card key={`recetas-${index}`} 
-          receta={receta}
-          onClick={ 
-          onSelectedRecipe
-        }/>
+        return <Card key={`recetas-${index}`} receta={receta} onClick={onSelectedRecipe}/>
       }
     })
-    setRenderR(temp2);
+    setRenderR(temp2)
   }
 
   const onSelectedRecipe = (receta) =>{
-    updateToRecent(receta);
-    navigation.navigate('DtScreen', receta);
+    updateToRecent(receta)
+    navigation.navigate('DtScreen', receta)
   }
-  
+
   useEffect(() => {
     if(state!="")
     {
       const temp = recetario?.map((receta, index)=>{
         if(receta.tag=="TRENDING" && receta.name.toLowerCase().includes(state.toLowerCase()))
         {
-          return <Card key={`recetas-${index}`} receta={receta} onClick={onSelectedRecipe}/>;
+          return <Card key={`recetas-${index}`} receta={receta} onClick={onSelectedRecipe}/>
         }
       })
-      setRender(temp);
+      setRender(temp)
     }else
     {
       const temp = recetario?.map((receta, index)=>{
         if(receta.tag=="TRENDING")
         {
-          return <Card key={`recetas-${index}`} receta={receta} onClick={onSelectedRecipe}/>;
+          return <Card key={`recetas-${index}`} receta={receta} onClick={onSelectedRecipe}/>
         }
       })
-      setRender(temp);
+      setRender(temp)
     }
   }, [state])
 
@@ -76,4 +70,4 @@ const MainScreen = (props) => {
   )
 }
 
-export default MainScreen;
+export default MainScreen

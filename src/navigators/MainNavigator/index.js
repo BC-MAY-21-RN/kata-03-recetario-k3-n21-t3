@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MainScreen from '../../screens/MainScreen/MainScreen';
 import DetailScreen from '../../screens/DetailScreen/DtScreen';
 
+
 const Stack = createNativeStackNavigator();
 
 const Component = () => {
@@ -17,4 +18,6 @@ const Component = () => {
     </Stack.Navigator>
   )
 }
+
+
 export default Component;

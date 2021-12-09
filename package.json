@@ -26,11 +26,17 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
     "@babel/runtime": "^7.16.3",
     "@react-native-community/eslint-config": "^3.0.1",
     "@rnx-kit/dep-check": "^1.9.4",
     "babel-jest": "^27.4.0",
-    "eslint": "^8.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "jest": "^27.4.0",
     "metro-react-native-babel-preset": "^0.66.2",
     "react-test-renderer": "17.0.2"

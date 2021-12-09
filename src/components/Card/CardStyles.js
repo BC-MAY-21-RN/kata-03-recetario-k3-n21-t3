@@ -19,6 +19,7 @@ export const cardStyles = StyleSheet.create({
   },
   cardText:{
     textAlign: 'center',
-    fontSize: 20
+    fontSize: 20,
+    color: "white"
   }
 })

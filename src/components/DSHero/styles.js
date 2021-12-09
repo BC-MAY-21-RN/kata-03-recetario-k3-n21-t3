@@ -15,7 +15,10 @@ export const Styles = StyleSheet.create({
     padding: 20,
     alignItems: 'center',
   },
-
+  iconos2:{
+    display: 'flex',
+    flexDirection: 'row',
+  },
   imagen: {
     width: "100%",
     height: "100%",
@@ -37,5 +40,4 @@ export const Styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white',
   }
-
 });

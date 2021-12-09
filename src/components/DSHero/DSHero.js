@@ -15,13 +15,12 @@ export const DSHero = (props) => {
     <View style={Styles.DSheroImage}>
       <View style={Styles.iconos}>
         <IonIcons name="close-outline" size={40} color="#fff"/>
-        <View>
-          <IonIcons name="share-outline" size={30} color="#fff">
+        <View style={Styles.iconos2}>
+          <IonIcons name="share-outline" size={30} color="#fff"/>
           <TouchableOpacity 
               onPress ={ () => {favorito(fav)}}>
             <IonIcons name={`${fav}`} size={30} color="#fff"/>
           </TouchableOpacity>
-          </IonIcons>
         </View>
       </View>
 
